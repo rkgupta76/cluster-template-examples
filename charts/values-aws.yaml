@@ -60,7 +60,7 @@ nodepools:
   # machineDeploymentAnnotations: {}
 
   # specify nodepool name
-  name: ec2-nodepool-1
+  name: rkg-ec2-nodepool-1
 
   # AWS machine image
   # ami: ""
@@ -87,7 +87,7 @@ nodepools:
   instanceType: t3a.medium
 
   # AWS region
-  region: us-west-2
+  region: ap-south-1
 
   # Whether to create `rancher-node` security group. If false, can provide with existing security group
   createSecurityGroup: true
@@ -131,7 +131,7 @@ nodepools:
   spotPrice: 0.5
 
   # Set the name of the ssh user
-  sshUser: ubuntu
+  sshUser: ec2-user
 
   # Amazon EBS volume type
   volumeType: gp2
