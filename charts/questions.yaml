@@ -27,18 +27,15 @@ questions:
   - custom
   group: "General"
 - variable: kubernetesVersion
-  default: v1.22.6+rke2r1
+  default: v1.24.11+rke2r1
   description: "Specify Kubernetes version"
   label: "Kubernetes Version"
   type: enum
   required: true
   options:
-  - v1.21.6+rke2r1
-  - v1.21.7+rke2r1
-  - v1.21.8+rke2r1
-  - v1.21.9+rke2r1
-  - v1.22.5+rke2r1
-  - v1.21.6+rke2r1
+  - v1.25.7+rke2r1
+  - v1.24.11+rke2r1
+  - v1.23.17+rke2r1
   group: "General"
 - variable: rke.localClusterAuthEndpoint.enabled
   default: false
@@ -117,7 +114,7 @@ questions:
 # EC2
 - variable: nodepools.0.region
   label: "Region"
-  default: us-west-2
+  default: ap-south-1
   type: string
   description: "AWS EC2 region"
   required: true
