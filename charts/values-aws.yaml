@@ -84,7 +84,7 @@ nodepools:
   insecureTransport: false
 
   # AWS instance type
-  instanceType: t3a.medium
+  instanceType: t3a.large
 
   # AWS region
   region: ap-south-1
