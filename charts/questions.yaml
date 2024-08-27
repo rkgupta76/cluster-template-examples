@@ -130,7 +130,7 @@ questions:
   group: "Nodepools"
 - variable: nodepools.0.instanceType
   label: "Instance Type"
-  default: t3a.medium
+  default: t3a.large
   type: string
   description: "AWS instance type"
   required: true
