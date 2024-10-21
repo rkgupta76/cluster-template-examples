@@ -4,8 +4,7 @@ cloudCredentialSecretName: amazonec2
 
 # Specify nodepool options. Can add multiple node groups, specify etcd, controlplane and worker roles.
 nodepools:
-- etcd: true
-  controlplane: true
+- controlplane: true
   worker: true
 
   # specify node labels
@@ -63,14 +62,15 @@ nodepools:
   name: rkg-ec2-nodepool-1
 
   # AWS machine image
-  # ami: ""
+  # ami: "ami-023b0205a3a2b22e1"
 
   # AWS spot instance duration in minutes (60, 120, 180, 240, 300, or 360)
   # blockDurationMinutes: 0
 
   # AWS root device name
-  deviceName: "/dev/sda1"
-
+  #deviceName: "/dev/sda1"
+  deviceName: "/dev/nvme0n1"
+  
   # Encrypt the EBS volume using the AWS Managed CMK
   encryptEbsVolume: false
   
@@ -90,12 +90,12 @@ nodepools:
   region: ap-south-1
 
   # Whether to create `rancher-node` security group. If false, can provide with existing security group
-  createSecurityGroup: true
-  # createSecurityGroup: false
+  # createSecurityGroup: true
+  createSecurityGroup: false
   # securityGroups: []
 
   # AWS keypair to use
-  keypairName: ""
+  keypairName: "rkg-aws"
 
   # Skip adding default rules to security groups
   securityGroupReadonly: false
@@ -104,7 +104,7 @@ nodepools:
   sshKeyContents: ""
 
   # AWS VPC subnet id
-  subnetId: ""
+  subnetId: "subnet-0dbcc2281e0b1d6c8"
 
   # Set this flag to enable CloudWatch monitoring
   monitoring: false
@@ -125,7 +125,7 @@ nodepools:
   retries: 5
 
   # AWS root disk size (in GB)
-  rootSize: 16
+  rootSize: 20
 
   # AWS spot instance bid price (in dollar)
   spotPrice: 0.5
@@ -137,7 +137,7 @@ nodepools:
   volumeType: gp2
 
   # AWS VPC id
-  # vpcId: ""
+  # vpcId: "vpc-e9e81282"
 
   # Create an EBS optimized instance
   useEbsOptimizedInstance: false
